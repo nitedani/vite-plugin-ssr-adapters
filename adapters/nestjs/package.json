@@ -1,6 +1,6 @@
 {
   "name": "@nitedani/vite-plugin-ssr-adapter-nestjs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "type": "module",
   "types": "lib/index.d.ts",
@@ -21,7 +21,7 @@
     "lib"
   ],
   "dependencies": {
-    "@nitedani/vite-plugin-ssr-adapter-express": "0.0.3"
+    "@nitedani/vite-plugin-ssr-adapter-express": "workspace:^"
   },
   "devDependencies": {
     "@nestjs/common": "^9.0.11",
