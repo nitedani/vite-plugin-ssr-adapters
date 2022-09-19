@@ -2,12 +2,9 @@
   "name": "@nitedani/vps-adapters",
   "version": "0.0.1",
   "private": true,
-  "workspaces": [
-    "adapters/*"
-  ],
   "scripts": {
     "build": "turbo run build",
-    "release": "pnpm build && cd adapters/express/ && pnpm release"
+    "release": "pnpm i && pnpm build && cd adapters/express/ && pnpm release"
   },
   "devDependencies": {
     "@brillout/release-me": "^0.0.7",

@@ -16,24 +16,41 @@ export type Middleware = (
   res: Response,
   next: NextFunction
 ) => void;
+export type PageContextInit = {
+  urlOriginal: string;
+  req: Request;
+  res: Response;
+};
 export interface VpsMiddlewareOptions {
   root?: string;
-  customPageContext?: (pageContextInit: {
-    urlOriginal: string;
-    req: Request;
-    res: Response;
-  }) => Promise<any>;
+  customPageContext?: (pageContextInit: PageContextInit) => Promise<any>;
   serveStaticProps?: Parameters<typeof expressStatic>[1];
+  compress?: boolean;
+  cache?: boolean;
 }
+
 export const vpsMiddleware = (options?: VpsMiddlewareOptions) => {
-  const { root, customPageContext, serveStaticProps } = defu(options, {
-    root: join(__dirname, '..', 'client'),
-    customPageContext: async pageContextInit => pageContextInit,
-  });
+  const { root, customPageContext, serveStaticProps, cache, compress } = defu(
+    options,
+    {
+      root: join(__dirname, '..', 'client'),
+      customPageContext: async pageContextInit => pageContextInit,
+      compress: true,
+      cache: true,
+    }
+  );
 
   const middlewares: Middleware[] = [];
   if (import.meta.env.PROD) {
-    middlewares.push(shrinkRay());
+    if (compress) {
+      middlewares.push(
+        // @ts-ignore
+        shrinkRay({
+          cacheSize: cache ? '128mB' : false,
+        })
+      );
+    }
+
     middlewares.push(expressStatic(root, serveStaticProps));
   }
 
