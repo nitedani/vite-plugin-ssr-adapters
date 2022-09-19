@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "release": "pnpm i && pnpm build && cd adapters/express/ && pnpm release"
+    "release:all": "pnpm i && pnpm build && pnpm _release:express && pnpm _release:nestjs",
+    "release:express": "pnpm i && pnpm build && cd adapters/express/ && pnpm release",
+    "release:nestjs": "pnpm i && pnpm build && cd adapters/nestjs/ && pnpm release",
+    "_release:express": "cd adapters/express/ && pnpm release",
+    "_release:nestjs": "cd adapters/nestjs/ && pnpm release"
   },
   "devDependencies": {
     "@brillout/release-me": "^0.0.7",

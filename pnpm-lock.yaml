@@ -35,13 +35,13 @@ importers:
     specifiers:
       '@nestjs/common': ^9.0.11
       '@nestjs/core': ^9.0.11
-      '@nitedani/vite-plugin-ssr-adapter-express': 0.0.1
+      '@nitedani/vite-plugin-ssr-adapter-express': 0.0.3
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
       rxjs: ^7.5.6
       typescript: ^4.8.3
     dependencies:
-      '@nitedani/vite-plugin-ssr-adapter-express': 0.0.1
+      '@nitedani/vite-plugin-ssr-adapter-express': link:../express
     devDependencies:
       '@nestjs/common': 9.0.11_j5hagqx4mwzscud4kyjdvubauy
       '@nestjs/core': 9.0.11_3mdbamkp7cmelffjfexsjo7tau
@@ -189,10 +189,6 @@ packages:
       vary: 1.1.2
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@nitedani/vite-plugin-ssr-adapter-express/0.0.1:
-    resolution: {integrity: sha512-X9H1buBuZm/nSETdzzvkzIVa/ho4dhdibmjsl+J2F1zCOzM9rHEkMFc7YPeunwPJw2B6KjGBW4VAQ9EPFi5FAA==}
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
