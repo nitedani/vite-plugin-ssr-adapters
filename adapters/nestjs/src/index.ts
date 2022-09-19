@@ -6,7 +6,9 @@ import {
 } from '@nitedani/vite-plugin-ssr-adapter-express';
 const OPTIONS = Symbol.for('vite-plugin-ssr.options');
 
-@Module({})
+@Module({
+  providers: [{ provide: OPTIONS, useValue: {} }],
+})
 export class VpsModule implements OnModuleInit {
   constructor(
     private readonly httpAdapterHost: HttpAdapterHost,
