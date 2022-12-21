@@ -1,6 +1,6 @@
 {
   "name": "@nitedani/vite-plugin-ssr-adapter-nestjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
   "types": "lib/index.d.ts",
