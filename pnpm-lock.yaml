@@ -35,7 +35,7 @@ importers:
     specifiers:
       '@nestjs/common': ^9.0.11
       '@nestjs/core': ^9.0.11
-      '@nitedani/vite-plugin-ssr-adapter-express': 0.0.3
+      '@nitedani/vite-plugin-ssr-adapter-express': 0.0.5
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
       rxjs: ^7.5.6
