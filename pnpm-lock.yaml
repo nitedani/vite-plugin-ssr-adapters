@@ -33,22 +33,22 @@ importers:
 
   adapters/nestjs:
     specifiers:
-      '@nestjs/common': ^9.0.11
-      '@nestjs/core': ^9.0.11
+      '@nestjs/common': ^10.0.5
+      '@nestjs/core': ^10.0.5
       '@nitedani/vite-plugin-ssr-adapter-express': 0.0.5
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
-      rxjs: ^7.5.6
-      typescript: ^4.8.3
+      rxjs: ^7.8.1
+      typescript: ^5.1.6
     dependencies:
       '@nitedani/vite-plugin-ssr-adapter-express': link:../express
     devDependencies:
-      '@nestjs/common': 9.0.11_j5hagqx4mwzscud4kyjdvubauy
-      '@nestjs/core': 9.0.11_3mdbamkp7cmelffjfexsjo7tau
+      '@nestjs/common': 10.0.5_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/core': 10.0.5_3zsywbagarfbthvknljetmszeu
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
-      rxjs: 7.5.6
-      typescript: 4.8.3
+      rxjs: 7.8.1
+      typescript: 5.1.6
 
 packages:
 
@@ -117,17 +117,19 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@nestjs/common/9.0.11_j5hagqx4mwzscud4kyjdvubauy:
-    resolution: {integrity: sha512-oYLIcOal3QOwcqt6goXovRNg8ZkalyOMjH0oYYzfJLrait6P7c6nAeWHu4qFDThY7GoZHEanLgji1qlqVEW09g==}
+  /@lukeed/csprng/1.1.0:
+    resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
+    engines: {node: '>=8'}
+    dev: true
+
+  /@nestjs/common/10.0.5_atc7tu2sld2m3nk4hmwkqn6qde:
+    resolution: {integrity: sha512-0E+SBI+SKswXbFG+Nwtnctrei5dvdFJ7b9/fQDL6KzDBtZwsglJpD86S3ooxnc7ek4vRG57oN2iLmMTjrcesMg==}
     peerDependencies:
-      cache-manager: '*'
       class-transformer: '*'
       class-validator: '*'
       reflect-metadata: ^0.1.12
       rxjs: ^7.1.0
     peerDependenciesMeta:
-      cache-manager:
-        optional: true
       class-transformer:
         optional: true
       class-validator:
@@ -135,19 +137,19 @@ packages:
     dependencies:
       iterare: 1.2.1
       reflect-metadata: 0.1.13
-      rxjs: 7.5.6
-      tslib: 2.4.0
-      uuid: 8.3.2
+      rxjs: 7.8.1
+      tslib: 2.6.0
+      uid: 2.0.2
     dev: true
 
-  /@nestjs/core/9.0.11_3mdbamkp7cmelffjfexsjo7tau:
-    resolution: {integrity: sha512-DYyoiWSGebDAG8WSfG/ue88HBU39kAJTi2YXftWdVSl1LFveV+pwKY83P2qX0ND38TS8WktFYpaMkXslf97BBQ==}
+  /@nestjs/core/10.0.5_3zsywbagarfbthvknljetmszeu:
+    resolution: {integrity: sha512-9A8nixBfE33TWAmmWvNoxdmHrRmHJY0oO3O4Iue0FVkawWJc0YOhSqdNs87McwvKE4InJMI7GVv01NYMEROdPA==}
     requiresBuild: true
     peerDependencies:
-      '@nestjs/common': ^9.0.0
-      '@nestjs/microservices': ^9.0.0
-      '@nestjs/platform-express': ^9.0.0
-      '@nestjs/websockets': ^9.0.0
+      '@nestjs/common': ^10.0.0
+      '@nestjs/microservices': ^10.0.0
+      '@nestjs/platform-express': ^10.0.0
+      '@nestjs/websockets': ^10.0.0
       reflect-metadata: ^0.1.12
       rxjs: ^7.1.0
     peerDependenciesMeta:
@@ -158,16 +160,15 @@ packages:
       '@nestjs/websockets':
         optional: true
     dependencies:
-      '@nestjs/common': 9.0.11_j5hagqx4mwzscud4kyjdvubauy
+      '@nestjs/common': 10.0.5_atc7tu2sld2m3nk4hmwkqn6qde
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
       iterare: 1.2.1
-      object-hash: 3.0.0
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
-      rxjs: 7.5.6
-      tslib: 2.4.0
-      uuid: 8.3.2
+      rxjs: 7.8.1
+      tslib: 2.6.0
+      uid: 2.0.2
     transitivePeerDependencies:
       - encoding
     dev: true
@@ -1647,11 +1648,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /object-hash/3.0.0:
-    resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
-    engines: {node: '>= 6'}
-    dev: true
-
   /object-inspect/1.12.2:
     resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==}
     dev: true
@@ -1971,8 +1967,8 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /rxjs/7.5.6:
-    resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
+  /rxjs/7.8.1:
+    resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
       tslib: 2.4.0
     dev: true
@@ -2240,6 +2236,10 @@ packages:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
+  /tslib/2.6.0:
+    resolution: {integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==}
+    dev: true
+
   /turbo-android-arm64/1.4.7:
     resolution: {integrity: sha512-BtWtH8e8w1GhtYpGQmkcDS/AUzVZhQ4ZZN+qtUFei1wZD7VAdtJ9Wcsfi3WD+mXA6vtpIpRJVfQMcShr8l8ErA==}
     cpu: [arm64]
@@ -2402,6 +2402,12 @@ packages:
     hasBin: true
     dev: true
 
+  /typescript/5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
   /uglify-js/3.17.0:
     resolution: {integrity: sha512-aTeNPVmgIMPpm1cxXr2Q/nEbvkmV8yq66F3om7X3P/cvOXQ0TMQ64Wk63iyT1gPlmdmGzjGpyLh1f3y8MZWXGg==}
     engines: {node: '>=0.8.0'}
@@ -2409,6 +2415,13 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /uid/2.0.2:
+    resolution: {integrity: sha512-u3xV3X7uzvi5b1MncmZo3i2Aw222Zk1keqLA1YkHldREkAhAqi65wuPfe7lHx8H/Wzy+8CE7S7uS3jekIM5s8g==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@lukeed/csprng': 1.1.0
+    dev: true
 
   /unpipe/1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
@@ -2421,11 +2434,6 @@ packages:
   /utils-merge/1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
-    dev: true
-
-  /uuid/8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
     dev: true
 
   /validate-npm-package-license/3.0.4:
