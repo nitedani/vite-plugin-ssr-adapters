@@ -41,7 +41,7 @@ export const vpsMiddleware = (options?: VpsMiddlewareOptions) => {
   );
 
   const middlewares: Middleware[] = [];
-  if (process.env.NODE_ENV === 'production') {
+  if (import.meta.env?.PROD || process.env.NODE_ENV === 'production') {
     if (compress) {
       middlewares.push(
         // @ts-ignore
