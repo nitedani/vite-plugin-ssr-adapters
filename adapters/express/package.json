@@ -1,6 +1,6 @@
 {
   "name": "@nitedani/vite-plugin-ssr-adapter-express",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "type": "module",
   "types": "lib/index.d.ts",
