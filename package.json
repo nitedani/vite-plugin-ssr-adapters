@@ -11,8 +11,8 @@
     "_release:nestjs": "cd adapters/nestjs/ && pnpm release"
   },
   "devDependencies": {
-    "@brillout/release-me": "^0.0.7",
-    "turbo": "^1.4.6"
+    "@brillout/release-me": "^0.1.7",
+    "turbo": "^1.10.7"
   },
   "engines": {}
 }
