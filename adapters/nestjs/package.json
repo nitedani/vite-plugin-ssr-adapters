@@ -21,7 +21,7 @@
     "lib"
   ],
   "dependencies": {
-    "@nitedani/vite-plugin-ssr-adapter-express": "0.0.8"
+    "@nitedani/vite-plugin-ssr-adapter-express": "0.0.9"
   },
   "devDependencies": {
     "@nestjs/common": "^10.0.5",
