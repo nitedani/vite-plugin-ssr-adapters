@@ -8,7 +8,7 @@ import {
 } from 'express';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { renderPage } from 'vite-plugin-ssr/server';
+import { renderPage } from 'vike/server';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export type Middleware = (

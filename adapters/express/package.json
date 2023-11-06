@@ -30,7 +30,7 @@
     "rimraf": "^3.0.2",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
-    "vite-plugin-ssr": "^0.4.142"
+    "vike": "^0.4.144"
   },
   "prettier": {
     "singleQuote": true,
