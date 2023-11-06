@@ -1,3 +1,7 @@
+## [0.0.10](https://github.com/nitedani/vite-plugin-ssr-adapters/compare/v0.0.9...v0.0.10) (2023-11-06)
+
+
+
 ## [0.0.9](https://github.com/nitedani/vite-plugin-ssr-adapters/compare/v0.0.7...v0.0.9) (2023-10-31)
 
 
