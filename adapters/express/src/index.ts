@@ -71,8 +71,11 @@ export const vpsMiddleware = (options?: VpsMiddlewareOptions) => {
     const pageContext = await renderPage(pageContextMerged);
     const { httpResponse } = pageContext;
     if (!httpResponse) return;
-    const { statusCode, contentType } = httpResponse;
-    res.status(statusCode).type(contentType);
+    const { statusCode, headers, earlyHints } = httpResponse
+    //@ts-ignore
+    if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) })
+    headers.forEach(([name, value]) => res.setHeader(name, value))
+    res.status(statusCode)
     httpResponse.pipe(res);
   });
   return middlewares;
