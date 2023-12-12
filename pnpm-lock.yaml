@@ -39,7 +39,7 @@ importers:
       rimraf: ^3.0.2
       rxjs: ^7.8.1
       typescript: ^5.1.6
-      vike-adapter-express: 0.0.12
+      vike-adapter-express: 0.0.13
     dependencies:
       vike-adapter-express: link:../express
     devDependencies:
