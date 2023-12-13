@@ -1,6 +1,6 @@
 {
   "name": "vike-adapter-nestjs",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "type": "module",
   "types": "lib/index.d.ts",
@@ -21,7 +21,7 @@
     "lib"
   ],
   "dependencies": {
-    "vike-adapter-express": "0.0.13"
+    "vike-adapter-express": "0.0.15"
   },
   "peerDependencies": {
     "@nestjs/core": "*"
