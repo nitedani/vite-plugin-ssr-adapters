@@ -21,7 +21,7 @@ export type PageContextInit = {
   req: Request;
   res: Response;
 };
-export interface VpsMiddlewareOptions {
+export interface VikeOptions {
   root?: string;
   customPageContext?: (pageContextInit: PageContextInit) => Promise<any>;
   serveStaticProps?: Parameters<typeof expressStatic>[1];
@@ -29,7 +29,7 @@ export interface VpsMiddlewareOptions {
   cache?: boolean;
 }
 
-export const vpsMiddleware = (options?: VpsMiddlewareOptions) => {
+export const vike = (options?: VikeOptions) => {
   const { root, customPageContext, serveStaticProps, cache, compress } = defu(
     options,
     {
@@ -54,7 +54,7 @@ export const vpsMiddleware = (options?: VpsMiddlewareOptions) => {
     middlewares.push(expressStatic(root, serveStaticProps));
   }
 
-  middlewares.push(async (req, res, next) => {
+  middlewares.push(async (req, res: Response, next) => {
     if (req.method !== 'GET') {
       return next();
     }
@@ -71,11 +71,11 @@ export const vpsMiddleware = (options?: VpsMiddlewareOptions) => {
     const pageContext = await renderPage(pageContextMerged);
     const { httpResponse } = pageContext;
     if (!httpResponse) return;
-    const { statusCode, headers, earlyHints } = httpResponse
-    //@ts-ignore
-    if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) })
-    headers.forEach(([name, value]) => res.setHeader(name, value))
-    res.status(statusCode)
+    const { statusCode, headers, earlyHints } = httpResponse;
+    if (res.writeEarlyHints)
+      res.writeEarlyHints({ link: earlyHints.map(e => e.earlyHintLink) });
+    headers.forEach(([name, value]) => res.setHeader(name, value));
+    res.status(statusCode);
     httpResponse.pipe(res);
   });
   return middlewares;

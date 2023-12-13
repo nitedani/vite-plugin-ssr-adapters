@@ -1,10 +1,7 @@
 import { DynamicModule, Inject, Module, OnModuleInit } from '@nestjs/common';
 import { HttpAdapterHost } from '@nestjs/core';
-import {
-  vpsMiddleware,
-  VpsMiddlewareOptions,
-} from '@nitedani/vite-plugin-ssr-adapter-express';
-const OPTIONS = Symbol.for('vite-plugin-ssr.options');
+import { vike, VikeOptions } from 'vike-adapter-express';
+const OPTIONS = Symbol.for('vike.options');
 
 @Module({
   providers: [{ provide: OPTIONS, useValue: {} }],
@@ -13,10 +10,10 @@ export class VpsModule implements OnModuleInit {
   constructor(
     private readonly httpAdapterHost: HttpAdapterHost,
     @Inject(OPTIONS)
-    private readonly viteSsrOptions: VpsMiddlewareOptions
+    private readonly vikeOptions: VikeOptions
   ) {}
 
-  static forRoot(options?: VpsMiddlewareOptions): DynamicModule {
+  static forRoot(options?: VikeOptions): DynamicModule {
     return {
       module: VpsModule,
       providers: [{ provide: OPTIONS, useValue: options || {} }],
@@ -34,6 +31,6 @@ export class VpsModule implements OnModuleInit {
       return;
     }
     const app = httpAdapter.getInstance();
-    app.use(vpsMiddleware(this.viteSsrOptions));
+    app.use(vike(this.vikeOptions));
   }
 }
