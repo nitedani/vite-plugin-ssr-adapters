@@ -21,7 +21,7 @@
     "lib"
   ],
   "dependencies": {
-    "@nitedani/shrink-ray-current": "^4.1.4",
+    "@nitedani/shrink-ray-current": "4.2.0",
     "defu": "^6.1.2"
   },
   "peerDependencies": {

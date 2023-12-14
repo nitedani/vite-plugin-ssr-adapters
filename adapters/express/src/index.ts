@@ -44,7 +44,6 @@ export const vike = (options?: VikeOptions) => {
   if (import.meta.env?.PROD || process.env.NODE_ENV === 'production') {
     if (compress) {
       middlewares.push(
-        // @ts-ignore
         shrinkRay({
           cacheSize: cache ? '128mB' : false,
         })
