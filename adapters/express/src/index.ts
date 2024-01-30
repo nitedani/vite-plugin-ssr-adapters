@@ -34,7 +34,7 @@ export const vike = (options?: VikeOptions) => {
     options,
     {
       root: join(__dirname, '..', 'client'),
-      customPageContext: async pageContextInit => pageContextInit,
+      customPageContext: pageContextInit => pageContextInit,
       compress: true,
       cache: true,
     }
@@ -62,6 +62,7 @@ export const vike = (options?: VikeOptions) => {
       urlOriginal,
       req,
       res,
+      userAgent: req.headers['user-agent']
     };
     const pageContextMerged = {
       ...pageContextInit,
