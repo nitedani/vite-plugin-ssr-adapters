@@ -21,7 +21,7 @@
     "lib"
   ],
   "dependencies": {
-    "vike-adapter-express": "0.0.15"
+    "vike-adapter-express": "0.0.16"
   },
   "peerDependencies": {
     "@nestjs/core": "*"
